@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace TaroHida\Types;
 
+use InvalidArgumentException;
 use zen\types\PositiveInteger;
 
 class PositiveIntegerAndZero
@@ -14,6 +15,10 @@ class PositiveIntegerAndZero
         return $this->value;
     }
 
+    /**
+     * @param int $value
+     * @throws InvalidArgumentException
+     */
     public function __construct(int $value)
     {
         if ($value === 0) {
