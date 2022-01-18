@@ -1,6 +1,10 @@
 {
     "name": "tarohida/php-types",
     "description": "PHP types to extend primitives. Positive Number, Positive Number With zero, Not Empty String",
+    "keywords": [
+        "type",
+        "types"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
