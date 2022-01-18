@@ -7,26 +7,17 @@ declare(strict_types=1);
 
 namespace Tests\TaroHida\Types;
 
-use TaroHida\Types\PositiveIntegerAndZero;
+use TaroHida\Types\PositiveInteger;
 use Tests\TestCase;
 
-class PositiveIntegerAndZeroTest extends TestCase
+class PositiveIntegerTest extends TestCase
 {
     /**
-     * @dataProvider zeroValueProvider
      * @dataProvider positiveIntegerValueProvider
      */
-    public function test_accept_zero_and_positive_number(int $input)
+    public function test_accept_positive_number(int $input)
     {
-        $integer = new PositiveIntegerAndZero($input);
+        $integer = new PositiveInteger($input);
         self::assertSame($input, $integer->getValue());
     }
-
-    public function zeroValueProvider(): array
-    {
-        return [
-            [0]
-        ];
-    }
-
 }
