@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f96de84f5ba3a76559ba4988ed6ccd3",
-    "packages": [],
+    "content-hash": "0e825223663a2be8294cbd6ec084ff55",
+    "packages": [
+        {
+            "name": "zenexjp/types",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zenexjp/php-types.git",
+                "reference": "bcc29d8e2978464bb79a83437acd3b29bd83cf4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zenexjp/php-types/zipball/bcc29d8e2978464bb79a83437acd3b29bd83cf4d",
+                "reference": "bcc29d8e2978464bb79a83437acd3b29bd83cf4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ali Masood",
+                    "email": "ali@zenex.co.jp",
+                    "homepage": "https://zenex.co.jp",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A php library to handle basic types like string, non empty string, positive integer and so on.",
+            "support": {
+                "issues": "https://github.com/zenexjp/php-types/issues",
+                "source": "https://github.com/zenexjp/php-types/tree/0.0.1"
+            },
+            "time": "2019-06-24T16:58:11+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -2104,7 +2150,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-pdo": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }

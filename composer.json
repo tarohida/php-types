@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "zenexjp/types": "0.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
