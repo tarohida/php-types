@@ -17,7 +17,9 @@
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
-        "TaroHida/Types" : "src/"
+        "psr-4": {
+            "TaroHida\\Types\\" : "src/TaroHida/Types"
+        }
     },
     "autoload-dev": {
         "psr-4": {
