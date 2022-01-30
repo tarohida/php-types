@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Tests\TaroHida\Types;
 
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use TaroHida\Types\Exception\PhpTypesInvalidArgumentException;
 use TaroHida\Types\Url;
 
 /*
@@ -37,7 +37,7 @@ final class UrlTest extends TestCase
      */
     public function testInvalid(string $url)
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(PhpTypesInvalidArgumentException::class);
 
         new Url($url);
     }

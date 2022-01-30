@@ -17,7 +17,6 @@ class PositiveIntegerAndZero
 
     /**
      * @param int $value
-     * @throws InvalidArgumentException
      */
     public function __construct(int $value)
     {

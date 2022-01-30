@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace TaroHida\Types;
 
 use InvalidArgumentException;
+use TaroHida\Types\Exception\PhpTypesInvalidArgumentException;
 
 /*
  * (c) Claude Khedhiri <claude@khedhiri.com>
@@ -19,11 +20,12 @@ class Url
 
     /**
      * @param string $value
+     * @throws PhpTypesInvalidArgumentException
      */
     public function __construct(string $value)
     {
         if (!self::isValid($value)) {
-            throw new InvalidArgumentException("${value} is not a valid url");
+            throw new PhpTypesInvalidArgumentException("${value} is not a valid url");
         }
         $this->value = $value;
     }

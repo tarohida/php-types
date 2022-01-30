@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace TaroHida\Types;
 
 use InvalidArgumentException;
+use TaroHida\Types\Exception\PhpTypesInvalidArgumentException;
 
 class PositiveInteger
 {
@@ -11,11 +12,15 @@ class PositiveInteger
 
     /**
      * @param int $value
-     * @throws InvalidArgumentException
+     * @throws PhpTypesInvalidArgumentException
      */
     public function __construct(int $value)
     {
-        $this->positive_integer = new \zen\types\PositiveInteger($value);
+        try {
+            $this->positive_integer = new \zen\types\PositiveInteger($value);
+        } catch (InvalidArgumentException $e) {
+            throw new PhpTypesInvalidArgumentException('', 0, $e);
+        }
     }
 
     public function getValue(): int
