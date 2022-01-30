@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 namespace Tests\TaroHida\Types;
 
-use InvalidArgumentException;
+use TaroHida\Types\Exception\PhpTypesInvalidArgumentException;
 use TaroHida\Types\NotEmptyString;
 
 use PHPUnit\Framework\TestCase;
@@ -16,7 +16,7 @@ class NotEmptyStringTest extends TestCase
 {
     public function test_method_empty_string_not_acceptable_and_throws_InvalidArgumentException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(PhpTypesInvalidArgumentException::class);
         new NotEmptyString('');
     }
 
